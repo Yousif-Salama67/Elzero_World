@@ -4,9 +4,9 @@
 /* End Style Header */
 
 /* Start Stayle Main */
-    /* Start Stayle Services Img Section */
+    /* Start Stayle Department Img Section */
 
-    .services-img {
+    .department-img {
       height: 400px;
       position: relative;
       top: -32px;
@@ -14,7 +14,7 @@
       background-size: cover;
     }
 
-    .services-word {
+    .department-word {
       height: 100%;
       margin-right: 80px;
       display: flex;
@@ -28,5 +28,5 @@
       font-weight: 700;
     }
 
-    /* End Stayle Contact Img Section */
+    /* End Stayle Department Img Section */
   /* End Style main */
