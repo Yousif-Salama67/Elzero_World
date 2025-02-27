@@ -1,0 +1,31 @@
+
+
+/* Start Style Header */
+/* End Style Header */
+
+/* Start Stayle Main */
+  /* Start Stayle Services Img Section */
+
+  .services-img {
+    height: 400px;
+    position: relative;
+    top: -32px;
+    background-image: url(/img/download.webp);
+    background-size: cover;
+  }
+
+  .services-word {
+    height: 100%;
+    margin-right: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    color: #fff;
+    font-size: 100px;
+    font-weight: 700;
+  }
+
+  /* End Stayle Contact Img Section */

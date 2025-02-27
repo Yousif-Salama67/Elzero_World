@@ -8,6 +8,8 @@
 
   .contact-img {
     height: 400px;
+    position: relative;
+    top: -32px;
     background-image: url(/img/download.webp);
     background-size: cover;
   }
