@@ -17,7 +17,6 @@ html {
 
 body {
   font-family: 'Cairo', sans-serif;
-  background-color: #eee;
 }
 
 a {
@@ -235,3 +234,227 @@ header nav > ul > li:hover .mega-menu {
 /* End Style Mega menue */
 
 /* End Style Header */
+
+/* Start Style Main */
+
+/* Start Style Request Section */
+
+.request {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@keyframes change-background {
+  0%, 100% {
+    background-image: url(../img/discount-background1.jpg);
+  }
+}
+
+.left-content {
+  background-image: url(/img/discount-background1.jpg);
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  position: relative;
+  z-index: 1;
+  animation: 10s linear 0s infinite normal none running change-background;
+}
+
+.request .content {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.request .left-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(23 135 224 / 97%);
+  z-index: -1;
+}
+
+.request .content h2 {
+  font-size: 40px;
+  letter-spacing: -2px;
+}
+
+.request .left-content > .content p {
+  line-height: 1.6;
+  font-size: 18px;
+  max-width: 500px;
+}
+
+.request .left-content > .content img {
+  width: 300px;
+  max-width: 100%;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50%;
+  padding-bottom: 50px;
+}
+
+form {
+  width: 60%;
+  margin: auto;
+}
+
+input , 
+textarea {
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.request .form textarea {
+  resize: none;
+  height: 200px;
+}
+
+.request .form [type="submit"] {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.request .form [type="submit"]:hover {
+  background-color: var(--main-color-alt);
+}
+
+/* End Style Request Section */
+
+/* End Style Main */
+
+/* Start Style Footer */
+
+footer {
+  background-color: rgb(25, 25, 25);
+  padding: 70px 0px 0px;
+}
+
+footer .container {
+  display: flex;
+  gap: 40px;
+}
+
+footer .box {
+  width: calc((100% - 40px) / 4);
+}
+
+footer .box h3 {
+  color: white;
+  font-size: 50px;
+  margin: 0px 0px 20px;
+}
+
+footer .box .social {
+  display: flex;
+}
+
+footer .box .social li {
+  margin-right: 10px;
+}
+
+footer .box .social li a {
+  background-color: rgb(49, 49, 49);
+  color: rgb(185, 185, 185);
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  transition: var(--main-transition);
+}
+
+footer .box .social li .facebook:hover {
+  background-color: var(--main-color-alt);
+}
+
+footer .box .social li .twitter:hover {
+  background-color: var(--main-color);
+}
+
+footer .box .social li .youtube:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+footer .box .text {
+  line-height: 2;
+  color: rgb(185, 185, 185);
+}
+
+footer .box .links li:not(:last-child) {
+  border-bottom: 1px solid rgb(68, 68, 68);
+}
+
+footer .box .links li {
+  padding: 15px 0px;
+  transition: var(--main-transition);
+}
+
+footer .box .links li a {
+  color: rgb(185, 185, 185);
+  transition: var(--main-transition);
+}
+
+footer .box .links li a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--main-color);
+}
+
+footer .box .links li:hover {
+  margin-left: 10px;
+}
+
+footer .box .links li:hover a {
+  color: white;
+}
+
+footer .box .line {
+  display: flex;
+  align-items: center;
+  color: rgb(185, 185, 185);
+  margin-bottom: 30px;
+}
+
+footer .box .line i {
+  color: var(--main-color);
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+footer .box img {
+  width: 78px;
+  border: 3px solid white;
+  margin: 2px;
+}
+
+footer > p {
+  padding: 25px 0px;
+  text-align: center;
+  color: white;
+  margin: 50px 0 0;
+  border-top: 1px solid #444;
+  word-spacing: 2px;
+}
+
+/* End Style Footer */
