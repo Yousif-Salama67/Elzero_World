@@ -482,6 +482,58 @@ header nav > ul > li:hover .mega-menu {
 }
 /* End Style Features Section */
 
+/* Start Style Our Skills Section */
+
+.our-skills {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.our-skills .container {
+  display: flex;
+  align-items: center;
+}
+
+.our-skills .skill h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.our-skills .skill h3 span {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 3px 5px;
+  color: var(--main-color);
+}
+
+.our-skills .skill .progress-bar {
+  width: 620px;
+  height: 30px;
+  background-color: #eee;
+  position: relative;
+}
+
+.our-skills .skill .progress-bar .the-progress {
+  background-color: var(--main-color);
+  height: 30px;
+}
+
+.our-skills .skill .progress-bar .p-80 {
+  width: 80%;
+}
+
+.our-skills .skill .progress-bar .p-85 {
+  width: 85%;
+}
+
+.our-skills .skill .progress-bar .p-70 {
+  width: 70%;
+}
+
+/* End Style Our Skills Section */
+
 /* Start Style Request Section */
 
 .request {
