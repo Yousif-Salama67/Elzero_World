@@ -57,6 +57,91 @@ ul {
   }
 }
 
+/* Start Style Main Title */
+
+.main-title {
+  text-transform: uppercase;
+  font-size: 30px;
+  border: 2px solid black;
+  width: fit-content;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  margin-bottom: 80px;
+  transition: var(--main-transition);
+}
+
+.main-title::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
+  left: -20%;
+}
+
+.main-title::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
+  right: -20%;
+}
+
+.main-title:hover::before {
+  z-index: -19;
+  animation: left-move 0.6s  linear forwards;
+}
+
+.main-title:hover::after {
+  animation: right-move 0.6s  linear forwards;
+  z-index: -19;
+}
+
+.main-title:hover {
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.6s;
+}
+
+@keyframes left-move {
+  50% {
+    left: 0%;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    border-radius: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+@keyframes right-move {
+  50% {
+    right: 0%;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    border-radius: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+/* End Style Main Title */
+
 /* End Global Rules */
 /* Satart Style Header */
 
@@ -236,6 +321,166 @@ header nav > ul > li:hover .mega-menu {
 /* End Style Header */
 
 /* Start Style Main */
+
+/* Start Style Features Section */
+
+.features {
+  background-color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.features .container {
+  display: flex;
+  gap: 40px;
+  position: relative;
+}
+
+.quality,
+.time,
+.passion {
+  text-align: center;
+  border: 1px solid rgb(204, 204, 204);
+  margin-top: 80px;
+}
+
+.back-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.back-img img {
+  max-width: 100%;
+}
+
+.features .quality .back-img::before,
+.features .time .back-img::before,
+.features .passion .back-img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.features .quality .back-img::before {
+  background: rgb(244 64 54 / 60%);
+}
+
+.features .time .back-img::before {
+  background: rgb(0 150 136 / 60%);
+}
+
+.features .passion .back-img::before {
+  background: rgb(3 169 244 / 60%);
+}
+
+.features .quality .back-img::after,
+.features .time .back-img::after,
+.features .passion .back-img::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0px 0px 170px 500px;
+  border-color: transparent transparent white transparent;
+  transition: var(--main-transition);
+}
+
+.features .quality:hover .back-img::after,
+.features .time:hover .back-img::after,
+.features .passion:hover .back-img::after {
+  border-width: 170px 500px 170px 0px;
+}
+
+.features .quality h2,
+.features .time h2,
+.features .passion h2  {
+  font-size: 40px;
+  margin: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.features .quality h2::after,
+.features .time h2::after,
+.features .passion h2::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 30px);
+  height: 5px;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features .quality h2::after {
+  background-color: #f44036;
+}
+
+.features .time h2::after {
+  background-color: #009688;
+}
+
+.features .passion h2::after {
+  background-color: #03a9f4;
+}
+
+.features .quality p,
+.features .time p,
+.features .passion p  {
+  font-size: 20px;
+  margin: 30px 0px;
+  padding: 25px;
+  color: #777;
+  line-height: 2;
+}
+
+.features .quality a,
+.features .time a,
+.features .passion a {
+  width: fit-content;
+  margin: 0px auto 30px;
+  border: 3px solid transparent;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 10px 30px;
+  border-radius: 6px;
+  transition: var(--main-transition);
+  display: block;
+}
+
+.features .quality a {
+  border-color: #f44036;
+  color: #f44036;
+  background: linear-gradient(to right, #f44036 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.features .time a {
+  border-color: #009688;
+  color: #009688;
+  background: linear-gradient(to right, #009688 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.features .passion a {
+  border-color:#03a9f4;
+  color: #03a9f4;
+  background: linear-gradient(to right, #03a9f4 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.features .quality:hover > a,
+.features .time:hover > a,
+.features .passion:hover > a {
+  background-position: left bottom;
+  color: white;
+}
+/* End Style Features Section */
 
 /* Start Style Request Section */
 
